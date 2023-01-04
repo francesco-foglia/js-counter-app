@@ -1,8 +1,5 @@
-// Set the counter variable to 0
-let counter = 0;
-
-// Check if there is a counter value in local storage and set the counter variable to it
-localStorage.getItem("counter") && (counter = localStorage.getItem("counter"));
+// Get the counter value from local storage or set it to 0
+let counter = localStorage.getItem("counter") ? localStorage.getItem("counter") : 0;
 
 // Select the main element and add the counter HTML to it
 const main = document.getElementById("main");

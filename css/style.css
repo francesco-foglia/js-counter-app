@@ -9,6 +9,11 @@
   --color-secondary: darkblue;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
   font-family: "Lato", sans-serif;
