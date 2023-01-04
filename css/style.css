@@ -1,0 +1,78 @@
+/* General Settings */
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato/Lato-Regular.ttf") format("truetype");
+}
+
+:root {
+  --color-primary: white;
+  --color-secondary: darkblue;
+}
+
+body {
+  background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+main {
+  min-height: 100vh;
+}
+
+/* Counter Settings */
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: var(--color-primary);
+  text-shadow: 2.5px 2.5px var(--color-secondary);
+  font-weight: 500 !important;
+}
+
+.button-placement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 375px) {
+  .button-placement {
+    flex-direction: column;
+  }
+}
+
+.counter-button {
+  min-width: 60px;
+  min-height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--color-secondary);
+}
+
+.counter-button:hover {
+  border: 1px solid transparent;
+  box-shadow: 2px 2px 5px var(--color-secondary);
+}
+
+#counter-value {
+  min-width: 100px;
+  min-height: 70px;
+  padding: 1rem;
+  color: var(--color-primary);
+  border: 2px solid var(--color-secondary);
+  box-shadow: 2px 2px 5px var(--color-primary);
+  background-color: var(--color-secondary);
+  text-align: center;
+  font-weight: bold;
+  border-radius: 20px;
+  word-break: break-all;
+}
+
+.negative {
+  color: red !important;
+}
