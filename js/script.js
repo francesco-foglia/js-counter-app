@@ -1,5 +1,6 @@
-// Get the counter value from local storage or set it to 0
-let counter = localStorage.getItem("counter") ? localStorage.getItem("counter") : 0;
+
+// Get the counter variable from local storage or set it to 0 if it doesn't exist
+let counter = parseInt(localStorage.getItem("counter")) || 0;
 
 // Select the main element and add the counter HTML to it
 const main = document.getElementById("main");
@@ -25,7 +26,7 @@ main.innerHTML = `
 const counterValue = document.getElementById("counter-value");
 checkCounter();
 
-// Select all the counter buttons and add an event listener to them
+// Select all the counter buttons and add an event listener to each one
 const counterButtons = document.querySelectorAll(".counter-button");
 counterButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -38,15 +39,16 @@ counterButtons.forEach((button) => {
       counter = 0;
     }
 
-    // Update the counter value, check if it is negative and save the counter value to local storage
+    // Update the counter value and check if it is negative, then save the counter variable to local storage
     counterValue.textContent = counter;
     checkCounter();
-    localStorage.setItem("counter", counter);
+    parseInt(localStorage.setItem("counter", counter));
 
   });
 });
 
-// Check if the counter value is negative and add the negative class to the counter value
+
+// Function to check if the counter is negative and add or remove the negative class to the counter value
 function checkCounter() {
   counter < 0 ? counterValue.classList.add("negative") : counterValue.classList.remove("negative");
 }
