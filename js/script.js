@@ -1,4 +1,3 @@
-
 // Get the counter variable from local storage or set it to 0 if it doesn't exist
 let counter = parseInt(localStorage.getItem("counter")) || 0;
 
@@ -42,7 +41,7 @@ counterButtons.forEach((button) => {
     // Update the counter value and check if it is negative, then save the counter variable to local storage
     counterValue.textContent = counter;
     checkCounter();
-    parseInt(localStorage.setItem("counter", counter));
+    localStorage.setItem("counter", counter);
 
   });
 });

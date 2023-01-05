@@ -21,7 +21,7 @@ https://francesco-foglia.github.io/js-counter-app
 ## Getting Started
 
 * Download the repository folder
-* Open index.html in your browser
+* Open ***index.html*** in your browser
 * Do not move folders or project files
 
 ## Contacts

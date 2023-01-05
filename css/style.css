@@ -5,8 +5,8 @@
 }
 
 :root {
-  --color-primary: white;
-  --color-secondary: darkblue;
+  --dark: darkblue;
+  --light: white;
 }
 
 html,
@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  background: linear-gradient(to bottom, var(--color-secondary), var(--color-primary));
+  background: linear-gradient(to bottom, var(--dark), var(--light));
   font-family: "Lato", sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -34,8 +34,7 @@ main {
 }
 
 h1 {
-  color: var(--color-primary);
-  text-shadow: 2.5px 2.5px var(--color-secondary);
+  color: var(--light);
   font-weight: 500 !important;
 }
 
@@ -56,25 +55,24 @@ h1 {
   min-width: 60px;
   min-height: 60px;
   border-radius: 50%;
-  border: 1px solid var(--color-secondary);
+  border: 1px solid var(--dark);
+  background-color: var(--light);
 }
 
 .counter-button:hover {
   border: 1px solid transparent;
-  box-shadow: 2px 2px 5px var(--color-secondary);
+  box-shadow: 2px 2px 5px var(--dark);
 }
 
 #counter-value {
   min-width: 100px;
   min-height: 70px;
   padding: 1rem;
-  color: var(--color-primary);
-  border: 2px solid var(--color-secondary);
-  box-shadow: 2px 2px 5px var(--color-primary);
-  background-color: var(--color-secondary);
+  color: var(--light);
+  background-color: var(--dark);
   text-align: center;
   font-weight: bold;
-  border-radius: 20px;
+  border-radius: 5px;
   word-break: break-all;
 }
 
