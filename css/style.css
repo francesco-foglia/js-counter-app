@@ -1,8 +1,5 @@
 /* General Settings */
-@font-face {
-  font-family: "Lato";
-  src: url("../fonts/lato/Lato-Regular.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
 
 :root {
   --dark: darkblue;
